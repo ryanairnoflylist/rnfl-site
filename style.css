@@ -1,0 +1,133 @@
+:root {
+     --accent: #d182a4;
+}
+body {
+    background-color: color-mix(in srgb, var(--accent) 8%, black);
+    color: color-mix(in srgb, var(--accent) 15%, white);
+    font-family: JetBrains Mono, Menlo, Consolas, Monaco, Adwaita Mono, Liberation Mono, Lucida Console, monospace;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    display: flex;
+    overflow-y: visible;
+    justify-content: center;
+    --sb-track-color: #000000;
+    --sb-thumb-color: #ffffff20;
+    --sb-size: 4px;
+    overflow-x: hidden;
+}
+
+container {
+
+    width: 560px;
+    margin: 48px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 48px;
+}
+
+p,a,h1,h2,h3,h4,h5 {
+    margin: 0;
+    padding: 0;
+}
+
+pre {
+    font-size: 10px;
+    color: var(--accent);
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 650px) {
+    container {
+        width: 86vw;
+    }
+
+    pre {
+        font-size: 1.8vw;
+    }
+}
+
+body::-webkit-scrollbar {
+    width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 1px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 0px;
+    height: 8px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+    body {
+        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
+}
+
+.pfp {
+    width: 48px;
+    height: 48px;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+}
+
+thing {
+    display: flex;
+    gap: 16px;
+    min-width: 0;
+}
+
+name {
+    font-weight: bold;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+info {
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+}
+
+links {
+    display: flex;
+    gap: 2px 16px;
+    flex-wrap: wrap;
+}
+
+a:link, a:visited {
+    color: var(--accent)
+}
+
+a:hover {
+    color: color-mix(in srgb, var(--accent) 70%, white);;
+}
+a:active {
+    color: color-mix(in srgb, var(--accent) 70%, black);;
+}
+
+pronouns {
+    background-color: color-mix(in srgb, var(--accent) 20%, transparent);;
+    padding: 4px;
+    font-size: 14px;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: color-mix(in srgb, var(--accent) 64%, white);
+}
